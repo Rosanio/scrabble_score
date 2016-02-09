@@ -53,4 +53,18 @@ public class ScrabbleTest {
     Integer score = 10;
     assertEquals(score, testApp.letterScore('z'));
   }
+
+  @Test
+  public void scrabbleScore_UserEntersIt_Returns2() {
+    Scrabble testApp = new Scrabble();
+    Integer score = 2;
+    assertEquals(score, testApp.scrabbleScore("it"));
+  }
+
+  @Test
+  public void scrabbleScore_UserEntersAWord_ReturnsScore() {
+    Scrabble testApp = new Scrabble();
+    Integer score = 14;
+    assertEquals(score, testApp.scrabbleScore("it works"));
+  }
 }

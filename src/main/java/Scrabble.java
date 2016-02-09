@@ -11,12 +11,13 @@ public class Scrabble {
   }
 
   public Integer scrabbleScore(String word) {
+    word = word.toLowerCase();
     char[] charArray = word.toCharArray();
-
+    Integer sumScore = 0;
     for(char letter: charArray) {
-      return letterScore(letter);
+      sumScore += letterScore(letter);
     }
-    return 0;
+    return sumScore;
   }
 
   public Integer letterScore(char letter) {
@@ -43,6 +44,9 @@ public class Scrabble {
     }
     if(letter == 'q' || letter == 'z') {
       return 10;
+    }
+    if(letter == ' ') {
+      return 0;
     }
     return 1;
   }
