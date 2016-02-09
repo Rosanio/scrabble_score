@@ -7,64 +7,55 @@ public class ScrabbleTest {
 
   @Test
   public void letterScore_UserEntersA_Returns1() {
-    Scrabble testApp = new Scrabble();
     Integer score = 1;
-    assertEquals(score, testApp.letterScore('a'));
+    assertEquals(score, Scrabble.letterScore('a'));
   }
 
   @Test
   public void letterScore_UserEntersF_Returns4() {
-    Scrabble testApp = new Scrabble();
     Integer score = 4;
-    assertEquals(score, testApp.letterScore('f'));
+    assertEquals(score, Scrabble.letterScore('f'));
   }
 
   @Test
   public void letterScore_UserEntersC_Returns3() {
-    Scrabble testApp = new Scrabble();
     Integer score = 3;
-    assertEquals(score, testApp.letterScore('c'));
+    assertEquals(score, Scrabble.letterScore('c'));
   }
 
   @Test
   public void letterScore_UserEntersD_Returns2() {
-    Scrabble testApp = new Scrabble();
     Integer score = 2;
-    assertEquals(score, testApp.letterScore('d'));
+    assertEquals(score, Scrabble.letterScore('d'));
   }
 
   @Test
   public void letterScore_UserEntersK_Returns5() {
-    Scrabble testApp = new Scrabble();
     Integer score = 5;
-    assertEquals(score, testApp.letterScore('k'));
+    assertEquals(score, Scrabble.letterScore('k'));
   }
 
   @Test
   public void letterScore_UserEntersJ_Returns8() {
-    Scrabble testApp = new Scrabble();
     Integer score = 8;
-    assertEquals(score, testApp.letterScore('j'));
+    assertEquals(score, Scrabble.letterScore('j'));
   }
 
   @Test
   public void letterScore_UserEntersZ_Returns10() {
-    Scrabble testApp = new Scrabble();
     Integer score = 10;
-    assertEquals(score, testApp.letterScore('z'));
+    assertEquals(score, Scrabble.letterScore('z'));
   }
 
   @Test
   public void scrabbleScore_UserEntersIt_Returns2() {
-    Scrabble testApp = new Scrabble();
     Integer score = 2;
-    assertEquals(score, testApp.scrabbleScore("it"));
+    assertEquals(score, Scrabble.scrabbleScore("it"));
   }
 
   @Test
   public void scrabbleScore_UserEntersAWord_ReturnsScore() {
-    Scrabble testApp = new Scrabble();
     Integer score = 14;
-    assertEquals(score, testApp.scrabbleScore("it works"));
+    assertEquals(score, Scrabble.scrabbleScore("it works"));
   }
 }
