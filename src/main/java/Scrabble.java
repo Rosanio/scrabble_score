@@ -11,6 +11,21 @@ public class Scrabble {
   }
 
   public Integer scrabbleScore(String word) {
+    char[] charArray = word.toCharArray();
+
+    for(char letter: charArray) {
+      return letterScore(letter);
+    }
     return 0;
+  }
+
+  public Integer letterScore(char letter) {
+    char[] score4 = {'f','h','v','w','y'};
+    for(char scoreLetter: score4) {
+      if(letter == scoreLetter) {
+        return 4;
+      }
+    }
+    return 1;
   }
 }
